@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
-    <script src="login.js"></script>
+    <script src="login.js" defer></script>
     <script src="https://kit.fontawesome.com/409fdf9367.js" crossorigin="anonymous"></script>
 
     <title>Document</title>
@@ -50,15 +50,11 @@
             padding-top: 30px;
             padding-bottom: 30px;
             filter: drop-shadow(0 15px 50px #000);
-            outline: 20px solid #252432;
-            background: repeating-conic-gradient(#ff2770 0%, #ff2770 5%, transparent 5%, transparent 40% #ff2770 50%);
             animation: rotating 4s linear infinite;
         }
 
-        @keyframes rotating {
-            0% {}
-
-            100% {}
+        div.outline {
+            outline: 20px solid #252432;
         }
 
         .form h3 {
@@ -108,7 +104,10 @@
             align-items: center;
             justify-content: space-between;
             gap: 56px;
+
         }
+
+        .form .gruop {}
 
         .form .signin h5 {
             color: #ff2770;
@@ -119,7 +118,6 @@
         }
 
         .form .signin h6 {
-            color: #ddd;
             font-size: 12px;
 
         }
@@ -137,8 +135,8 @@
 </head>
 
 <body>
-    <div class="">
-        <div class="form">
+    <section>
+        <div>
             <h3>
                 <i class="fa-solid fa-right-to-bracket"></i>
                 Sign Up
@@ -148,12 +146,12 @@
             <input type="password" placeholder="password">
             <input type="text" placeholder="email address">
             <button>CREATE</button>
-            <div class="signin">
+            <div class="">
                 <h6>Already registered?</h6>
                 <h5>Sign IN</h5>
             </div>
         </div>
-    </div>
+    </section>
 </body>
 
 </html>
