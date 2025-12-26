@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="./photo/5.jpg.jpg">
+    <script src="login.js"></script>
+    <script src="https://kit.fontawesome.com/409fdf9367.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
     <style>
         * {
@@ -19,7 +21,9 @@
             align-items: center;
             justify-content: center;
             font-family: "Roboto" sans-serif;
-            background-color: #252432;
+            background-color: #252428;
+            /* background-color: rgba(0, 0, 0, 0.9); */
+
 
         }
 
@@ -33,23 +37,42 @@
         }
 
         .form {
-            height: 300px;
-            width: 290px;
+            height: 320px;
+            width: 267px;
             display: flex;
             align-items: center;
             flex-direction: column;
             gap: 15px;
-            /* background-color: rgba(225, 225, 225, 0.9); */
-            background-color: skyblue;
-            border-radius: 6px;
+            background-color: #252432;
+            border-radius: 1px;
             text-align: center;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 8px 25px rgba(0, 0, 0, 0.3);
             padding-top: 30px;
             padding-bottom: 30px;
+            filter: drop-shadow(0 15px 50px #000);
+            outline: 20px solid #252432;
+            background: repeating-conic-gradient(#ff2770 0%, #ff2770 5%, transparent 5%, transparent 40% #ff2770 50%);
+            animation: rotating 4s linear infinite;
+        }
+
+        @keyframes rotating {
+            0% {}
+
+            100% {}
+        }
+
+        .form h3 {
+            color: white;
+            font-size: 15px;
+        }
+
+        .form h3 i {
+            color: #ff2770;
+            text-shadow: 0 0 5px, 0 0 30px #ff2770;
         }
 
         .form>input {
-            width: 250px;
+            width: 215px;
             background-color: #f9f9f9;
             border: #ddd;
             border-radius: 50px;
@@ -58,35 +81,77 @@
             box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
         }
 
+        .form input:hover {
+            transform: translateY(-1px);
+            transition: 1s;
+            border: white;
+            box-shadow: 0 0 20px whitesmoke;
+        }
+
         .form button {
-            width: 250px;
+            width: 215px;
             border-radius: 50px;
             padding: 10px;
-            background-color: #56d45c;
-            border: #2ba531;
+            background-color: #45f3ff;
+            color: #111;
+            border: none;
+        }
+
+        .form button:hover {
+            box-shadow: 0 0 10px #45f3ff, 0 0 60px #45f3ff;
+            transition: 1s;
+            transform: translateY(-1px);
+        }
+
+        .form .signin {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 56px;
+        }
+
+        .form .signin h5 {
+            color: #ff2770;
+        }
+
+        .form .signin h5:hover {
+            text-shadow: 1px 0 5px, 0 2px 20px #ff2770;
+        }
+
+        .form .signin h6 {
             color: #ddd;
-            box-shadow: 0 2px 8px #1aeb25;
+            font-size: 12px;
 
         }
 
-        .form h5 {
-            color: white;
+        .form .signin h6:hover {
+            text-shadow: 0 0 15px whitesmoke;
+            transition: 1s;
+
         }
 
-        .form h5 a {
+        .form .signin a {
             color: #3c9c41;
         }
     </style>
 </head>
 
 <body>
-    <div class="loginpage">
+    <div class="">
         <div class="form">
-            <input type="text" placeholder="name">
+            <h3>
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Sign Up
+                <i class="fa-solid fa-heart"></i>
+            </h3>
+            <input type="text" placeholder="Username">
             <input type="password" placeholder="password">
             <input type="text" placeholder="email address">
             <button>CREATE</button>
-            <h5 class="text">Already registered? <a href="#">Sign In</a></h5>
+            <div class="signin">
+                <h6>Already registered?</h6>
+                <h5>Sign IN</h5>
+            </div>
         </div>
     </div>
 </body>
