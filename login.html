@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="./photo/5.jpg.jpg">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Roboto" sans-serif;
+            background-color: #252432;
+
+        }
+
+        .loginpage {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .form {
+            height: 300px;
+            width: 290px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+            /* background-color: rgba(225, 225, 225, 0.9); */
+            background-color: skyblue;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .form>input {
+            width: 250px;
+            background-color: #f9f9f9;
+            border: #ddd;
+            border-radius: 50px;
+            padding: 12px;
+            font-size: 14px;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .form button {
+            width: 250px;
+            border-radius: 50px;
+            padding: 10px;
+            background-color: #56d45c;
+            border: #2ba531;
+            color: #ddd;
+            box-shadow: 0 2px 8px #1aeb25;
+
+        }
+
+        .form h5 {
+            color: white;
+        }
+
+        .form h5 a {
+            color: #3c9c41;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loginpage">
+        <div class="form">
+            <input type="text" placeholder="name">
+            <input type="password" placeholder="password">
+            <input type="text" placeholder="email address">
+            <button>CREATE</button>
+            <h5 class="text">Already registered? <a href="#">Sign In</a></h5>
+        </div>
+    </div>
+</body>
+
+</html>
